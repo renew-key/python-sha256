@@ -68,7 +68,7 @@ test-build-windows:
     - name: Download Executable File
       uses: actions/download-artifact@v4
       with:
-        name: sha256-windows.exe
+        name: sha256-windows
     - name: Text Executable File
       runs: |
         ls
