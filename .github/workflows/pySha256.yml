@@ -15,9 +15,8 @@ jobs:
         uses: actions/checkout@v4
       - name: install pyinstaller
         run: pip install pyinstaller
-      - name: package sha256
+      - name: package sha256 and run sha256
         run: |
           pyinstaller.exe .\sha256.py -F
           cd .\dist\
-      - name: run sha256
-        run: .\sha256.exe .\sha256.exe
+          .\sha256.exe .\sha256.exe
