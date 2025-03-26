@@ -35,7 +35,7 @@ jobs:
       - name: upload exe file
         uses: actions/upload-artifact@v4
         with:
-          name: sha256-windows-exe
+          name: sha256-linux
           path: dist/sha256
 jobs:
   build-on-mac:
@@ -50,6 +50,6 @@ jobs:
       - name: upload exe file
         uses: actions/upload-artifact@v4
         with:
-          name: sha256-windows-exe
+          name: sha256-mac
           path: dist/sha256
 
