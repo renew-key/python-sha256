@@ -73,5 +73,5 @@ jobs:
 
       - name: Test Executable File
         run: |
-          dir dist
-          dist\sha256.exe dist\sha256.exe
+          ls
+          .\sha256.exe .\sha256.exe
