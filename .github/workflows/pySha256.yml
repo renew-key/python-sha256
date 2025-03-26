@@ -11,45 +11,53 @@ jobs:
   build-on-windows:
     runs-on: windows-latest
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: install pyinstaller
+
+      - name: Install PyInstaller
         run: pip install pyinstaller
-      - name: build exe
-        run: pyinstaller .\sha256.py -F
-      - name: upload exe file
+
+      - name: Build EXE
+        run: pyinstaller sha256.py -F
+
+      - name: Upload EXE File
         uses: actions/upload-artifact@v4
         with:
-          name: sha256-windows-exe
+          name: sha256-windows
           path: dist/sha256.exe
-jobs:
+
   build-on-linux:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: install pyinstaller
+
+      - name: Install PyInstaller
         run: pip install pyinstaller
-      - name: build exe
+
+      - name: Build Executable
         run: pyinstaller sha256.py -F
-      - name: upload exe file
+
+      - name: Upload Executable File
         uses: actions/upload-artifact@v4
         with:
           name: sha256-linux
           path: dist/sha256
-jobs:
+
   build-on-mac:
     runs-on: macos-latest
     steps:
-      - name: checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
-      - name: install pyinstaller
+
+      - name: Install PyInstaller
         run: pip install pyinstaller
-      - name: build exe
+
+      - name: Build Executable
         run: pyinstaller sha256.py -F
-      - name: upload exe file
+
+      - name: Upload Executable File
         uses: actions/upload-artifact@v4
         with:
           name: sha256-mac
           path: dist/sha256
-
